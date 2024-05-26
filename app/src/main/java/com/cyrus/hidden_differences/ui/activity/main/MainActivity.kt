@@ -29,7 +29,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     var listGameType: ArrayList<GameType> = arrayListOf()
 
     var onDismissRewardCallBack: ((Boolean) -> Unit)? = { _ ->
-        Log.d("SMITH", "Callback: ")
+        
     }
 
     override fun getContentLayout(): Int = R.layout.activity_main
