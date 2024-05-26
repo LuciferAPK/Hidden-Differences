@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_game_play_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_high_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lexend_extra_bold"
+                android:text="@string/txt_high_score"
+                android:textColor="@color/black"
+                android:textAllCaps="true"
+                android:textSize="@dimen/sp18"
+                android:layout_marginEnd="@dimen/dp2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/txt_point_high_score"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_point_high_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lexend_extra_bold"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp18"
+                android:layout_marginEnd="@dimen/dp16"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/timer"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp26"
+            android:layout_marginTop="@dimen/dp25"
+            android:background="@android:color/transparent"
+            android:paddingHorizontal="@dimen/dp26"
+            android:progressDrawable="@drawable/seekbar_progress_style"
+            android:thumb="@drawable/seekbar_thumb"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtscore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sp16"
+            android:fontFamily="@font/lexend_extra_bold"
+            android:text="SCRORE"
+            android:textColor="#25CCCC"
+            android:textSize="@dimen/sp42"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timer" />
+
+        <com.cyrus.hidden_differences.ui.customview.FlowLayout
+            android:id="@+id/flowLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp0"
+            android:layout_marginHorizontal="@dimen/dp8"
+            android:layout_marginTop="@dimen/dp16"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/dp16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtscore"
+            app:layout_constraintBottom_toTopOf="@id/constraint"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp16"
+            android:layout_marginBottom="@dimen/dp100"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <FrameLayout
+                android:id="@+id/btnFind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp26"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnHeart"
+                    android:layout_width="@dimen/dp46"
+                    android:layout_height="@dimen/dp46"
+                    android:layout_marginStart="@dimen/dp16"
+                    android:layout_marginTop="@dimen/dp12"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:background="@drawable/ic_bg_button"
+                    android:padding="@dimen/dp10"
+                    app:srcCompat="@drawable/ic_glass" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/numberFind"
+                    android:layout_width="@dimen/dp26"
+                    android:layout_height="@dimen/dp26"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/dp4"
+                    android:background="@drawable/bg_button_number"
+                    android:fontFamily="@font/lexend_400"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp16"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/btnPause"
+                app:layout_constraintStart_toEndOf="@+id/btnFind"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp8">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dp46"
+                    android:layout_height="@dimen/dp46"
+                    android:layout_marginStart="@dimen/dp16"
+                    android:layout_marginTop="@dimen/dp12"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:background="@drawable/ic_bg_button"
+                    android:padding="@dimen/dp10"
+                    android:src="@drawable/ic_pause_time" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/numberPause"
+                    android:layout_width="@dimen/dp26"
+                    android:layout_height="@dimen/dp26"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/dp4"
+                    android:background="@drawable/bg_button_number"
+                    android:fontFamily="@font/lexend_400"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp16"/>
+            </FrameLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include
+            android:id="@+id/layout_banner_ads"
+            layout="@layout/layout_banner_ads"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

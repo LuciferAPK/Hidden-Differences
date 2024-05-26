@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "851810085899",
+    "project_id": "hidden-differences-4f36a",
+    "storage_bucket": "hidden-differences-4f36a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:851810085899:android:c1c532c697a7e9192feb0e",
+        "android_client_info": {
+          "package_name": "com.cyrus.hidden_differences"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAj4WVtw0f-pknxVEhFurMNKvSfXl3DEg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

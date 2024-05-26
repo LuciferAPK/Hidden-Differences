@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Hidden Differences</string>
+
+    <!-- OFFLINE MODE -->
+    <string name="internet_restored">Internet connection restored</string>
+    <string name="no_internet">No internet connection</string>
+
+    <string name="txt_high_score">high score:</string>
+
+    <string name="tap_color">Tap color</string>
+    <string name="tap_number">Tap number</string>
+    <string name="tap_text">Tap text</string>
+    <string name="tap_image">Tap image</string>
+    <string name="tap_fruit">Tap fruit</string>
+    <string name="ultra_hard">Ultra hard</string>
+</resources>

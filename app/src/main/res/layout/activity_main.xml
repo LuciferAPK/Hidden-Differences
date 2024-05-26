@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_main_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_ic_game"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_game"
+            android:layout_marginTop="@dimen/dp80"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginHorizontal="@dimen/dp36"/>
+
+        <LinearLayout
+            android:id="@+id/linearButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_ic_game">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnHighScore"
+                android:layout_width="@dimen/dp46"
+                android:layout_height="@dimen/dp46"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@drawable/ic_bg_button"
+                android:padding="@dimen/dp10"
+                app:srcCompat="@drawable/ic_cup" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnSound"
+                android:layout_width="@dimen/dp46"
+                android:layout_height="@dimen/dp46"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginStart="@dimen/dp26"
+                android:background="@drawable/ic_bg_button"
+                android:padding="@dimen/dp10"
+                app:srcCompat="@drawable/ic_un_sound" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnHeart"
+                    android:layout_width="@dimen/dp46"
+                    android:layout_height="@dimen/dp46"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_marginStart="@dimen/dp26"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:background="@drawable/ic_heart"
+                    android:padding="@dimen/dp10" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/numberHeart"
+                    android:layout_width="@dimen/dp26"
+                    android:layout_height="@dimen/dp26"
+                    android:layout_gravity="end"
+                    android:background="@drawable/bg_button_number"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp16"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="@dimen/dp46"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dp26"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgGif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:background="@drawable/ic_bg_button"
+                    android:padding="@dimen/dp10"
+                    android:src="@drawable/ic_gift"
+                    android:visibility="visible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgNew"
+                    android:layout_width="@dimen/dp26"
+                    android:layout_height="@dimen/dp26"
+                    android:layout_gravity="end"
+                    app:srcCompat="@drawable/ic_new"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp0"
+            android:layout_marginTop="@dimen/dp25"
+            android:layout_marginBottom="@dimen/dp25"
+            app:layout_constraintTop_toBottomOf="@id/linearButton"
+            app:layout_constraintBottom_toTopOf="@id/txt_name_game"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_name_game"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tap_color"
+            android:textSize="@dimen/sp18"
+            android:textColor="@color/white"
+            android:fontFamily="@font/lexend_500"
+            android:layout_marginBottom="@dimen/dp15"
+            app:layout_constraintBottom_toTopOf="@id/btn_play"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_play"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/dp100"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <include
+            android:id="@+id/layout_banner_ads"
+            layout="@layout/layout_banner_ads"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

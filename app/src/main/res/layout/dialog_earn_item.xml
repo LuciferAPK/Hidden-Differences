@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgLock"
+            android:layout_width="@dimen/dp180"
+            android:layout_height="@dimen/dp150"
+            android:layout_marginTop="@dimen/dp26"
+            android:contentDescription="@null"
+            android:elevation="@dimen/dp1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_earn_coin" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-50dp"
+            android:padding="@dimen/dp5"
+            android:background="@drawable/bg_curverd_8dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgLock">
+
+            <LinearLayout
+                android:id="@+id/message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp46"
+                android:layout_marginTop="@dimen/dp60">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/lexend_extra_bold"
+                    android:gravity="center"
+                    android:text="Earn item?"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/sp20" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dp46"
+                    android:layout_height="@dimen/dp46"
+                    android:layout_marginStart="@dimen/dp16"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:background="@drawable/ic_bg_button"
+                    android:padding="@dimen/dp10"
+                    android:src="@drawable/ic_glass" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dp46"
+                    android:layout_height="@dimen/dp46"
+                    android:layout_marginStart="@dimen/dp16"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:background="@drawable/ic_bg_button"
+                    android:padding="@dimen/dp10"
+                    android:src="@drawable/ic_pause_time" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnWatchAds"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_marginHorizontal="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp18"
+                android:layout_marginBottom="@dimen/dp26"
+                android:background="@drawable/bg_curved_16dp"
+                android:backgroundTint="#3E9A93"
+                android:fontFamily="@font/lexend_extra_bold"
+                android:gravity="center"
+                android:text="Watch Ads"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp20"
+                app:drawableLeftCompat="@drawable/ic_watch_ads"
+                android:drawablePadding="-10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/message" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
